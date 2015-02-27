@@ -1,14 +1,16 @@
-$def with (project, commit)
+$def with (data)
+
+$code:
+	x = len(data)
 
 <h1>thucydides</h1>
-<h2>$project</h2>
+<h2>$data[0]["project_name"]</h2>
 
-$for i in range(10):
-	<&nbsp>
+$for i in range(x):
 	<tr>
-		<td><b>commit name: </b></td> $commit[0]
-		<td><b>date: </b></td> $commit[1]
-		<td><b>markdown: </b></td> $commit[2]
+		<b>commit: </b> $data[i]["commit_title"]
+		<b>date: </b> $data[i]["date"]
+		<b>markdown: </b> $data[i]["markdown"]
 	</tr>
 	<br>
 
