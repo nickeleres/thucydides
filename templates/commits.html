@@ -7,10 +7,10 @@ $code:
 <h2>$data[0]["project_name"]</h2>
 
 $for i in range(x):
-	<tr>
+	<div id='single_commit'>
 		<b>commit: </b> $data[i]["commit_title"]
-		<b>date: </b> $data[i]["date"]
+		<b>date: </b> $data[i]["date"] <br>
 		<b>markdown: </b> $data[i]["markdown"]
-	</tr>
+	</div>
 	<br>
 
