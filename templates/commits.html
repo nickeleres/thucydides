@@ -1,0 +1,13 @@
+$def with (project, commit)
+
+<h1>thucydides</h1>
+<h2>$project</h2>
+
+$for i in range(10):
+	<&nbsp>
+	<tr>
+		<td><b>commit name: </b></td> $commit[0]
+		<td><b>date: </b></td> $commit[1]
+		<td><b>markdown: </b></td> $commit[2]
+	</tr>
+	<br>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Thucydides</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+  </head>
+  <body>
+    <div class="container">
+    	<div class="row">
+    		<div class="col-sm-6">
+    			<div class="headers">
+            <div class="row">
+	    			  <h1>Thucydides</h1>
+            </div>
+            <div class="row">
+  	    			<h3 id='title'>*auto-fill project name*</h3>
+              <button id='view_posts_button' type="submit" class="btn btn-success">View All</button>
+            </div>
+    			</div>
+    		</div>
+    	</div>
+      <hr>
+      <div class="container">
+          <div class="row">
+            <div class="col-sm-6 entry">
+              <input type="text" class="form-control" placeholder="Commit Title">
+            </div>
+            <div class="col-sm-6 entry">
+              <input type="text" class="form-control" placeholder="TODAY'S DATE--automatically set?">
+            </div>
+            <input type="hidden" class="form-control" placeholder="project_id">
+          </div>
+          <div class="row markdown">
+            <h4 id='markdown_text'>Enter Markdown Below</h4>
+              <div class="col-sm-12">
+                <textarea class="form-control markdown" rows="6"></textarea>
+              </div>
+          </div>
+          <button id='submit_button' type="submit" class="btn btn-primary">Submit</button>
+      </div>
+    </div>
+  </body>
+</html>

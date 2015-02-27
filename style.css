@@ -1,0 +1,22 @@
+.headers{
+	margin-top: 2em;
+}
+
+.markdown{
+	margin-top: 1em;
+}
+
+#submit_button{
+	margin-top: 1em;
+	float: right;
+}
+
+#view_posts_button{
+	position: absolute;
+	bottom: 2px;
+	margin-left: 1em;
+}
+
+#title{
+	float: left;
+}
