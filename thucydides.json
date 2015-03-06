@@ -1,38 +1,56 @@
-[
-	{
-		"project_name": "greenglass",
-		"commit_title": "commit 1",
-		"date": "date 1",
-		"markdown": "markdown 1"
-	},
-	{
-		"project_name": "greenglass",
-		"commit_title": "commit 2",
-		"date": "date 2",
-		"markdown": "markdown 2"
-	},
-	{
-		"project_name": "greenglass",
-		"commit_title": "commit 3",
-		"date": "date 3",
-		"markdown": "markdown 3"
-	},
-	{
-		"project_name": "greenglass",
-		"commit_title": "commit 4",
-		"date": "date 4",
-		"markdown": "markdown 4"
-	},
-	{
-		"project_name": "greenglass",
-		"commit_title": "commit 5",
-		"date": "date 5",
-		"markdown": "markdown 5"
-	},
-	{
-		"project_name": "greenglass",
-		"commit_title": "commit 6",
-		"date": "date 6",
-		"markdown": "markdown 6"
-	}
-]
+			[
+				{
+					"commits": [
+						{
+							"project_id": "1",
+							"commit_title": "commit 1",
+							"date": "date 1",
+							"markdown": "markdown 1"
+						},
+						{
+							"project_id": "1",
+							"commit_title": "commit 2",
+							"date": "date 2",
+							"markdown": "markdown 2"
+						},
+						{
+							"project_id": "1",
+							"commit_title": "commit 3",
+							"date": "date 3",
+							"markdown": "markdown 3"
+						},
+						{
+							"project_id": "1",
+							"commit_title": "commit 4",
+							"date": "date 4",
+							"markdown": "markdown 4"
+						},
+						{
+							"project_id": "2",
+							"commit_title": "commit 5",
+							"date": "date 5",
+							"markdown": "markdown 5"
+						},
+						{
+							"project_id": "2",
+							"commit_title": "commit 6",
+							"date": "date 6",
+							"markdown": "markdown 6"
+						}
+					]
+				},
+				{
+					"projects": [
+						{
+							"id": 1,
+							"project_name": "GreenGlass for Groups",
+							"description": "Support group projects for retention agreements"
+						},
+						{
+							"id": 2,
+							"project_name": "Zumo Redesign",
+							"description": "New eda theme-based design"
+						}
+					]
+				}
+			]

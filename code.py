@@ -1,29 +1,35 @@
-#app.py
-#! /usr/bin/python
-import json
+# #defines the class methods associated with URL end points
+# class Commits:
+# 	def GET(self):
+# 		data = basemodel.BaseModel().get_data()
+# 		return render.commits(data)
+
+
+import web, json, sys, os, basemodel
 from pprint import pprint
-import sys, os
-abspath = os.path.dirname(__file__)
-sys.path.append(abspath)
-os.chdir(abspath)
-import web
 
-render = web.template.render('templates/')
+render = web.template.render('/Users/argenticdev/mySites/Thucydides/templates')
 
-#maps URLs to classes
 urls = (
-	'/commits', 'commits',
-	'/new', 'new',
-	'/login', 'login'
-)
-#defines the class methods associated with URL end points
-class commits:
-	def GET(self):
-		json_data = open('thucydides.json')
-		data = json.load(json_data)
-		return render.commits(data)
+  '/', 'Hello',
+  '/commits', 'Commits',
+  '/new', 'New'
+  )
 
-class new:
+class Hello:
+	def GET(self):
+		basemodel_instance = basemodel.BaseModel()
+		commit_instance = commit.Commit()
+		all_commits = commit_instance.findAll()
+		return render.commits(all_commits)
+
+class Commits:
+	def GET(self):
+		basemodel_instance = basemodel.BaseModel()
+		all_commits = basemodel_instance.get_data()
+		return render.commits(all_commits)
+
+class New:
     def GET(self):
     	form = self.form()
     	return render.new(form) 
@@ -48,23 +54,12 @@ class new:
         web.form.Button('commit entry'),
     )
 
-class login:
-	def GET(self):
-		login = form.Form(
-		    form.Textbox('username'),
-		    form.Password('password'),
-		    form.Button('Login'),
-		)
-		l = login()
-		return render.login(l)
 
-#creates application and specifies the use of above URLs
-if __name__ == "__main__":
-    app = web.application(urls, globals())
-    app.run()    
+def application(environ, start_response):
+    # Wrapper to set SCRIPT_NAME to actual mount point.
+    os.environ['ROOT_PATH'] = environ.get('ROOT_PATH')
+    return _application(environ, start_response)
 
 
+application = web.application(urls, globals()).wsgifunc()
 
-#calls mod_wsgi
-app = web.application(urls, globals(), autoreload=False)
-application = app.wsgifunc()
