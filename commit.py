@@ -6,7 +6,6 @@ from pprint import pprint
 all_data = basemodel.BaseModel().get_data()
 
 all_commits = all_data[0]['commits']
-all_projects = all_data[1]['projects']
 
 class Commit:
 
@@ -17,33 +16,28 @@ class Commit:
 		self.markdown = None
 
 	def find_all(self):
-		y = [commit for commit in all_commits if commit['project_id'] == 1]
-		return y
+		return all_commits
 
-	def find(self, index, key, value):
-		return all_commits[index].get(key, value)
+	def find(self, key, value):
+		commits_found = [commit for commit in all_commits if commit[key] == value]
+		return commits_found
 
-	def find_one(self, index, key):
-		return all_commits[index][key]
+	def find_one(self, key, value):
+		commit_found = [commit for commit in all_commits if commit[key] == value]
+		return commit_found[0]
 
 x = Commit()
 
-print(all_commits)
+#print(x.find_one('project_id', '1'))
 
-print(x.find_all())
 
-class Project:
 
-	def __init__(self):
-		self.id = None
-		self.title = None
-		self.description = None
 
-	def find_all(self):
-		return all_projects
 
-	#def find(self, key):
 
-	#def find_one(self, index, key):
+
+
+
+
 
 

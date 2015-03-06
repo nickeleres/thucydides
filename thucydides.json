@@ -47,6 +47,11 @@
 							"description": "Support group projects for retention agreements"
 						},
 						{
+							"id": 1,
+							"project_name": "GreenGlass for Groups",
+							"description": "Support group projects for retention agreements"
+						},
+						{
 							"id": 2,
 							"project_name": "Zumo Redesign",
 							"description": "New eda theme-based design"
